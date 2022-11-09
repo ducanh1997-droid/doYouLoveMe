@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ứng dụng vui DoYouLoveMe</title>
+</head>
+<style>
+    #no {
+        position: absolute;
+        margin-left: 20px;
+    }
+    body {
+        text-align: center;
+    }
+</style>
+<body onload="docReady()">
+    <h1>Do you love me?</h1>
+    <button id="yes" onclick="clickYes()">Yes</button>
+    <button id="no" onclick="clickNo()">No</button>
+</body>
+<script>
+    let position = document.getElementById('no');
+    function clickYes(){
+        alert('<3');
+    }
+    function clickNo(){
+        position.style.top = Math.floor(Math.random()*window.innerHeight) + "px";
+        position.style.left = Math.floor(Math.random()*window.innerWidth) + "px";
+    }
+</script>
+</html>
